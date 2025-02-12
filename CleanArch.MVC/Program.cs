@@ -1,4 +1,6 @@
 using CleanArch.Infra.Data;
+using CleanArch.Infra.IoC;
+using CleanArch.MVC.MappingConfig;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,9 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddInfraestructure(builder.Configuration);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddInfraestructure(builder.Configuration);
+builder.Services.AddAutoMapperConfiguration();
 
 var app = builder.Build();
 

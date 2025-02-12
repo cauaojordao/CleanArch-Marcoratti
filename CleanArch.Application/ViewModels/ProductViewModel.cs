@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CleanArch.Application.ViewModels
+{
+    public class ProductViewModel
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Product name is required")]
+        [MinLength(3)]
+        [MaxLength(100)]
+        [DisplayName("Product Name")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Product description is required")]
+        [MinLength(3)]
+        [MaxLength(100)]
+        [DisplayName("Product Description")]
+        public string Description { get; set; }
+
+        [Required(ErrorMessage = "Product name is required")]
+        [Range(1, 99999.99)]
+        [DisplayName("Product Price")]
+        public decimal Price { get; set; }
+    }
+}
