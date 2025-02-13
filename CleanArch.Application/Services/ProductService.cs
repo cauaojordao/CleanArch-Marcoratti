@@ -45,10 +45,10 @@ namespace CleanArch.Application.Services
             var mapProduct = _mapper.Map<Product>(product);
             _productRepository.Update(mapProduct);
         }
-        public void Delete(ProductViewModel product)
+        public void Remove(ProductViewModel product)
         {
             var mapProduct = _mapper.Map<Product>(product);
-            _productRepository.Delete(mapProduct);
+            _productRepository.Remove(mapProduct);
         }
 
     }

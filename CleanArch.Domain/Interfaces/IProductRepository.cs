@@ -14,6 +14,6 @@ namespace CleanArch.Domain.Interfaces
 
         void Add(Product product);
         void Update(Product product);
-        void Delete(Product product);
+        void Remove(Product product);
     }
 }

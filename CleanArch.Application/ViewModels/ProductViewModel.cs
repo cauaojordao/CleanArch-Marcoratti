@@ -15,18 +15,19 @@ namespace CleanArch.Application.ViewModels
         [Required(ErrorMessage = "Product name is required")]
         [MinLength(3)]
         [MaxLength(100)]
-        [DisplayName("Product Name")]
+        [DisplayName("Name")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Product description is required")]
         [MinLength(3)]
         [MaxLength(100)]
-        [DisplayName("Product Description")]
+        [DisplayName("Description")]
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Product name is required")]
         [Range(1, 99999.99)]
-        [DisplayName("Product Price")]
+        [DisplayFormat(DataFormatString = "{0:C2}")]
+        [DisplayName("Price")]
         public decimal Price { get; set; }
     }
 }

@@ -40,7 +40,7 @@ namespace CleanArch.Infra.Data.Repositories
             _context.Update(product);
             _context.SaveChanges();
         }
-        public void Delete(Product product)
+        public void Remove(Product product)
         {
             _context.Remove(product);
             _context.SaveChanges();
